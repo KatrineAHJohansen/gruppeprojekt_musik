@@ -13,7 +13,6 @@ img {
   width: 100%;
   height: auto;
   display: block;
-  
 }
 
 body {
@@ -25,3 +24,5 @@ main {
   max-width: 1200px;
   margin-inline: auto;
 }
+
+
