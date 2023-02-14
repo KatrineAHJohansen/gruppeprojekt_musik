@@ -5,29 +5,19 @@
 }
 
 :root {
-  /*Her skal vi skrive vores generelle farver på fonte, baggrunde mm. når vi har besluttet os for dem
-    --primary: #;
-    --secondary: #;
-    --tertiary: #;
-
-    --primary-font: ;
-    --secondary-font: ;
-
-    --h1-font-weight: ;
-    --h1-font-size: ;
-
-    --h2-font-weight: ;
-    --h2-font-size: ;
-
-    --p-font-weight: ;
-    --p-font-size: ;
-*/
+  --bg-color: #09122a;
+  --header-text-color: #fa3bc8;
 }
 
 img {
   width: 100%;
   height: auto;
   display: block;
+  
+}
+
+body {
+  background-color: var(--bg-color);
 }
 
 main {
