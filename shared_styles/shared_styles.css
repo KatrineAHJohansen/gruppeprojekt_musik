@@ -5,8 +5,13 @@
 }
 
 :root {
+  /*COLOR*/
   --bg-color: #09122a;
   --header-text-color: #fa3bc8;
+
+  /*FONT*/
+  --h1-font-weight: 800;
+  --h1-font-size: xx-large;
 }
 
 img {
@@ -25,4 +30,21 @@ main {
   margin-inline: auto;
 }
 
+h1 {
+  font-weight: 400;
+  font-size: xx-large;
+  color: var(--header-text-color);
+  text-align: center;
+}
 
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 1rem;
+  max-width: 1200px;
+  margin-top: 1rem;
+  margin-inline: auto;
+  flex-wrap: wrap;
+}
