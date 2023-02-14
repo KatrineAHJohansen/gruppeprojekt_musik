@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-html {
+:root {
   /*Her skal vi skrive vores generelle farver på fonte, baggrunde mm. når vi har besluttet os for dem
     --primary: #;
     --secondary: #;
