@@ -1,0 +1,66 @@
+1. 
+I vores ARRAY vil vi gerne have at:
+        Selve ARRAY'ets navn bliver "musikliste". Inden i dette ARRAY har vi nogle objekter. 
+        Vi kommer til at kunne filtrere i vores ARRAY objekter gennem objektet genre.
+
+
+        Objekterne kommer til at være følgende:
+            1. Kunstner
+            2. Sang
+            3. Album
+            4. Udgivelse 
+            5. Genre
+
+
+
+2. 
+I et ARRAY kan det se ud som således:
+
+        musikliste [ 
+
+            {
+                "kunstner": "navn_her";
+                "sang": "navn_her";
+                "album": "navn_her";
+                "udgivelse": "navn_her";
+                "genre": "navn_her";
+            }
+
+            {
+                "kunstner": "navn_her";
+                "sang": "navn_her";
+                "album": "navn_her";
+                "udgivelse": "navn_her";
+                "genre": "navn_her";
+            }
+
+            {
+                "kunstner": "navn_her";
+                "sang": "navn_her";
+                "album": "navn_her";
+                "udgivelse": "navn_her";
+                "genre": "navn_her";
+            }
+
+            {
+                "kunstner": "navn_her";
+                "sang": "navn_her";
+                "album": "navn_her";
+                "udgivelse": "navn_her";
+                "genre": "navn_her";
+            }
+
+            {
+                "kunstner": "navn_her";
+                "sang": "navn_her";
+                "album": "navn_her";
+                "udgivelse": "navn_her";
+                "genre": "navn_her";
+            }
+        ]
+
+        OSV......
+
+        I et fuldt JavaScript kigger vi på en opstilling der ser ud således:
+
+            const endpoint = RESTAPI HER
