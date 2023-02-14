@@ -2,6 +2,7 @@
   --text-color: #09122a;
 }
 
+/*Card for afspilningsknap på undersiden*/
 .afspilning {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
