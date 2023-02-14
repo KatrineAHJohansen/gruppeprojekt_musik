@@ -24,6 +24,7 @@ I et ARRAY kan det se ud som således:
                 "album": "navn_her";
                 "udgivelse": "navn_her";
                 "genre": "navn_her";
+                "person": "Katrine, Jonas, Amanda, Simone her";
             }
 
             {
