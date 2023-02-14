@@ -1,0 +1,31 @@
+:root {
+  --text-color: #09122a;
+}
+
+.afspilning {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  background-color: #fa3bc8;
+  padding: 1rem;
+  gap: 1rem;
+  margin-top: 1rem;
+  color: var(--text-color);
+}
+.afspilning_img {
+  grid-area: 1 / 1 / 4 / 3;
+  background-color: #020864;
+}
+.afspilning_titel {
+  grid-area: 1 / 3 / 2 / 5;
+}
+.afspilning_kunstner {
+  grid-area: 2 / 3 / 3 / 5;
+  opacity: 50%;
+  margin-top: -1rem;
+}
+.afspilning_button {
+  grid-area: 3 / 3 / 4 / 5;
+}
