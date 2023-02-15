@@ -20,6 +20,7 @@ img {
   width: 100%;
   height: auto;
   display: block;
+  background-color: #020864;
 }
 
 body {
@@ -36,7 +37,16 @@ h1 {
   font-weight: 400;
   font-size: xx-large;
   color: var(--header-text-color);
-  text-align: center;
+}
+
+h2{
+font-weight: 300;
+font-size: large;
+}
+
+p {
+  font-weight: 200;
+  font-size: medium;
 }
 
 .header {
@@ -50,6 +60,12 @@ h1 {
   margin-inline: auto;
   flex-wrap: wrap;
 }
+
+.genre_navn{
+  color: #fa3bc8;
+  text-align: center;
+}
+
 
 /*-------------------------------------------------*/
 

@@ -1,0 +1,15 @@
+.img_filter {
+    position: relative;
+    display: inline-block;
+   }
+   .img_filter img {
+    width: 100%;
+   }
+   .img_filter:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 3000px #0944A1 inset;
+    opacity: 50%;
+   }
