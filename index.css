@@ -1,0 +1,241 @@
+:root {
+  /*COLOR*/
+  --bg-color: #09122a;
+  --header-text-color: #fa3bc8;
+
+  /*FONT*/
+  --h1-font-weight: 800;
+  --h1-font-size: 13vw;
+
+  --h2-font-weight: 800;
+  --h2-font-size: 8vw;
+
+  --h3-font-weight: 800;
+  --h3-font-size: 6vw;
+}
+
+@font-face {
+  font-family: centrano2;
+  src: url(font/CentraNo2-Medium.ttf);
+}
+
+#index_main {
+  margin: calc((100vh / 25) * 1.563) calc((100vw / 25) * 1.563);
+}
+
+h1 {
+  font-weight: 400;
+  font-size: var(--h1-font-size);
+  color: var(--header-text-color);
+}
+
+h2 {
+  font-weight: 300;
+  font-size: var(--h2-font-size);
+  color: var(--header-text-color);
+}
+
+h3 {
+  font-weight: 300;
+  font-size: var(--h3-font-size);
+  color: var(--header-text-color);
+}
+
+.title {
+  text-transform: uppercase;
+  font-family: centrano2;
+  text-align: center;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-family: centrano2;
+  text-align: center;
+}
+
+.artist_index {
+  text-transform: uppercase;
+  font-family: centrano2;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.genre_artist {
+  text-transform: uppercase;
+  font-family: centrano2;
+  text-align: center;
+  font-size: 5vw;
+  color: var(--header-text-color);
+}
+
+.title_sub {
+  margin-bottom: 40px;
+}
+
+#background_artist {
+  background-color: var(--header-text-color);
+  padding: 10px;
+}
+
+.background_blue {
+  background-color: #0959c0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#artist_container {
+  background-color: var(--bg-color);
+  opacity: 0.8;
+}
+
+.Slide {
+  margin: 0 15%;
+}
+
+.genre_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 20px;
+}
+
+.genre_grid a {
+  background-color: var(--header-text-color);
+  padding: 20px 40px;
+  margin: 20px 0;
+  font-size: var(--h3-font-size);
+  color: white;
+  text-transform: uppercase;
+  font-family: centrano2;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.genre_grid a:hover {
+  background-color: #9e157a;
+}
+
+/* Slideshow pitch */
+
+.prev,
+.next {
+  cursor: pointer;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  background: var(--header-text-color);
+  margin: 0 10px;
+}
+
+.arrows {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #f3f3f3;
+}
+
+.numbertext {
+  color: #589df6;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  font-family: rubik;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+div .Slide img {
+  width: 100%;
+}
+
+.img_artist {
+  position: relative;
+}
+
+#artist_container .background_blue {
+  opacity: 0.5;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+@media (min-width: 800px) {
+  #index_main {
+    margin: calc((100vh / 15) * 1.563) calc((100vw / 15) * 1.563);
+  }
+
+  h1.title {
+    font-size: 7vw;
+  }
+
+  h2.subtitle {
+    font-size: 3.5vw;
+  }
+
+  .Slide_inner {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    position: relative;
+  }
+
+  .artist_info {
+    margin-right: 20px;
+  }
+
+  h3.artist_index {
+    font-size: 3vw;
+    text-align: right;
+  }
+
+  h4.genre_artist {
+    font-size: 1.5vw;
+    text-align: right;
+  }
+
+  section.genre_grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+    gap: 0 50px;
+  }
+  .genre_grid a {
+    font-size: 3vw;
+  }
+  .Slide {
+    margin: 0 10%;
+  }
+}
