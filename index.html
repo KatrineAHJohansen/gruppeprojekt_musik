@@ -6,16 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <link rel="stylesheet" href="/shared_styles/shared_styles.css" />
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="index.css" />
     <title>LANDING PAGE</title>
   </head>
   <body>
     <header></header>
-    <main>
-      <section>
-        <div class="img_filter">
-          <img src="." alt="."/>
-      </div>
+    <main id="index_main">
+      <section class="title_sub" id="container">
+        <h1 class="title">Explore</h1>
+        <h1 class="title">Explore</h1>
+        <h1 class="title">Explore</h1>
+        <h2 class="subtitle">new artists</h2>
+      </section>
+      <section id="background_artist">
+        <div id="artist_container">
+          <div class="Slide fade">
+            <div class="Slide_inner">
+              <div class="artist_info">
+                <h3 class="artist_index">Cobrah</h3>
+                <h4 class="genre_artist">Electronic // Dance</h4>
+              </div>
+              <div class="img_artist">
+                <img src="albumcover/cobrahbby2.jpg" alt="cobra cover" />
+                <div class="background_blue"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="Slide fade">
+            <div class="Slide_inner">
+              <div class="artist_info">
+                <h3 class="artist_index">Chance The Rapper</h3>
+                <h4 class="genre_artist">Hip Hop</h4>
+              </div>
+              <div class="img_artist">
+                <img src="albumcover/chance_the_rapper_cover.png" alt="chance cover" />
+                <div class="background_blue"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="Slide fade">
+            <div class="Slide_inner">
+              <div class="artist_info">
+                <h3 class="artist_index">Justin Bieber</h3>
+                <h4 class="genre_artist">R&B // Pop</h4>
+              </div>
+              <div class="img_artist">
+                <img src="albumcover/justin_bieber_cover.png" alt="jusin bieber cover" />
+                <div class="background_blue"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="Slide fade">
+            <div class="Slide_inner">
+              <div class="artist_info">
+                <h3 class="artist_index">Hans Philip</h3>
+                <h4 class="genre_artist">Pop</h4>
+              </div>
+              <div class="img_artist">
+                <img src="albumcover/hans_philip_cover.png" alt="hans philip cover" />
+                <div class="background_blue"></div>
+              </div>
+            </div>
+          </div>
+          <div class="arrows">
+            <a class="prev" onclick="plusSlides(-1)">&#60;</a>
+            <a class="next" onclick="plusSlides(1)">&#62;</a>
+          </div>
+        </div>
+      </section>
+      <section class="genre_grid">
+        <a href="afspilning.html?cat=Pop">Pop</a>
+        <a href="afspilning.html?cat=Hip Hop">Hip Hop</a>
+        <a href="afspilning.html?cat=Electronic">Electronic</a>
+        <a href="afspilning.html?cat=R&B">R&B</a>
       </section>
     </main>
     <script src="musiklistejson.js"></script>
