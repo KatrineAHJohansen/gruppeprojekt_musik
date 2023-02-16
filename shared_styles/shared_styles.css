@@ -30,11 +30,12 @@ body {
   background-color: var(--bg-color);
 }
 
-/* main {
-  width: 90%;
+main {
+  /* width: 90%;
   max-width: 1200px;
-  margin-inline: auto;
-} */
+  margin-inline: auto; */
+  margin: calc((100vh / 25) * 1.563) calc((100vw / 25) * 1.563);
+}
 
 h1 {
   font-weight: 400;
