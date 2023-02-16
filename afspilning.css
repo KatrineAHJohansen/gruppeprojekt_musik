@@ -2,8 +2,8 @@
   --text-color: #09122a;
 }
 h1, h2, p {
-  color: var(--text-color
-  );
+  color: var(--text-color);
+
 }
 
 /*Card for afspilningsknap på undersiden*/
