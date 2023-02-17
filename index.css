@@ -201,6 +201,10 @@ nav ul li {
   list-style-type: none;
 }
 
+nav ul a {
+  text-decoration: none;
+}
+
 /* Slideshow pitch */
 
 .prev,
