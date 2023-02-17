@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="/shared_styles/shared_styles.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Form PAGE</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="albumcover/logo_2_1.png" alt="" />
+      </div>
+    </header>
+    <main>
+      <h3 id="h3_form">Send in your favorite songs to the mixtape!</h3>
+      <section id="form_grid">
+        <form action="">
+          <div class="brugerinfo">
+            <div class="input_bruger">
+              <label for="name">Full Name</label>
+              <input id="name" name="navn" type="text" required placeholder="fx.Simone Pedersen" />
+            </div>
+            <div class="input_bruger">
+              <label for="email">E-mail</label>
+              <input id="email" name="navn" type="email" required placeholder="fx.simonepedersen@live.dk" />
+            </div>
+          </div>
+
+          <div class="songs">
+            <div class="songs_input">
+              <label for="genre">Choose Genre</label>
+              <select id="genre" name="genrelist">
+                <option value="" hidden>Choose genre</option>
+                <option value="pop">Pop</option>
+                <option value="rnb">R&B</option>
+                <option value="hiphop">Hip Hop</option>
+                <option value="electronic">Electronic</option>
+              </select>
+            </div>
+            <div class="songs_input">
+              <label for="song">Song</label>
+              <input type="text" id="song" name="song" />
+            </div>
+            <div class="songs_input">
+              <label for="artist_form">Artist</label>
+              <input type="text" name="artist" id="artist_form" />
+            </div>
+          </div>
+          <button type="submit">Send in your song</button>
+        </form>
+        <img src="albumcover/logo_2.png" id="img_form" alt="" />
+      </section>
+    </main>
+
+    <footer>
+      <script src="javascript.js"></script>
+    </footer>
+  </body>
+</html>

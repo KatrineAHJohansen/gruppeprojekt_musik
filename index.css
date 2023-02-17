@@ -11,7 +11,10 @@
   --h2-font-size: 8vw;
 
   --h3-font-weight: 800;
-  --h3-font-size: 6vw;
+  --h3-font-size: 7vw;
+
+  --h4-font-weight: 800;
+  --h4-font-size: 3vw;
 }
 
 @font-face {
@@ -38,6 +41,12 @@ h2 {
 h3 {
   font-weight: 300;
   font-size: var(--h3-font-size);
+  color: var(--header-text-color);
+}
+
+h4 {
+  font-weight: 300;
+  font-size: var(--h4-font-size);
   color: var(--header-text-color);
 }
 
@@ -122,6 +131,71 @@ h3 {
   background-color: #9e157a;
 }
 
+.button_artist {
+  font-size: var(--h4-font-size);
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: centrano2;
+  padding: 1rem;
+  background-color: var(--header-text-color);
+  width: fit-content;
+  text-align: right;
+  margin: 1rem auto;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.button_artist a {
+  text-decoration: none;
+  color: white;
+}
+
+.button_artist:hover {
+  background-color: #9e157a;
+}
+
+header nav button {
+  border: none;
+}
+
+nav button svg {
+  height: 3rem;
+  z-index: 2;
+}
+
+nav button {
+  z-index: 2;
+}
+
+header div img {
+  width: auto;
+}
+
+html body header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 2rem 5rem 2rem;
+}
+
+nav ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: #142349;
+  width: 80vw;
+  z-index: 1;
+  padding-top: 40vh;
+}
+
+nav ul li {
+  font-family: centrano2;
+  font-size: var(--h3-font-size);
+  color: white;
+  list-style-type: none;
+}
+
 /* Slideshow pitch */
 
 .prev,
@@ -150,7 +224,7 @@ h3 {
 
 .prev:hover,
 .next:hover {
-  background-color: #f3f3f3;
+  background-color: #9e157a;
 }
 
 .numbertext {
@@ -213,6 +287,7 @@ div .Slide img {
   .Slide_inner {
     display: grid;
     grid-template-columns: 2fr 3fr;
+    grid-template-rows: 2fr;
     position: relative;
     padding-top: 2rem;
   }
@@ -241,6 +316,24 @@ div .Slide img {
   .Slide {
     margin: 0 10%;
   }
+
+  div.button_artist {
+    font-size: 1.5vw;
+    margin: 0 1rem 0 auto;
+  }
+
+  div.img_artist {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+
+  header nav ul {
+    width: 30vw;
+  }
+
+  nav ul li {
+    font-size: var(--h4-font-size);
+  }
 }
 
 #container {
@@ -250,7 +343,6 @@ div .Slide img {
 h1 {
   text-align: center;
   color: #fff;
-  font-size: 5em;
   letter-spacing: 10px;
   /*Create overlap*/
 
@@ -435,4 +527,87 @@ h1:nth-child(3) {
     transform: none;
     opacity: 0.25;
   }
+}
+
+section form label {
+  color: white;
+}
+
+div.brugerinfo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+#h3_form {
+  font-size: 2rem;
+  font-family: centrano2;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+form div label {
+  font-family: centrano2;
+  font-size: 1.5rem;
+}
+
+div.input_bruger {
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  justify-content: space-between;
+}
+
+input {
+  width: 15rem;
+  font-family: centrano2;
+}
+
+div.songs_input {
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+  justify-content: space-between;
+}
+
+#genre {
+  width: 15rem;
+  font-family: centrano2;
+}
+
+div.songs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+main section form {
+  background-color: #3b1b49;
+  width: fit-content;
+  padding: 2rem;
+}
+
+section form button {
+  background-color: #f93bc8;
+  font-family: centrano2;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  color: white;
+}
+
+#img_form {
+  background-color: transparent;
+  width: 25vw;
+}
+
+#form_grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+header div img {
+  background-color: transparent;
+  width: 5rem;
 }
