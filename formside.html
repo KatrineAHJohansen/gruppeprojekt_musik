@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="shared_styles/shared_styles.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Form PAGE</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="albumcover/logo_2_1.png" alt="" /></a>
+      </div>
+      <nav>
+        <ul>
+          <a href="afspilning.html?cat=all"> <li>Genre</li></a>
+          <a href="afspilning.html?artist=all"><li>Artist</li></a>
+          <a href="formside.html"><li>Send in your song</li></a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h3 id="h3_form">Send in your favorite songs to the mixtape!</h3>
+      <section id="form_grid">
+        <form name="sendInSong" netlify>
+          <div class="brugerinfo">
+            <div class="input_bruger">
+              <label for="name">Full Name</label>
+              <input id="name" name="navn" type="text" required placeholder="Full name" />
+            </div>
+            <div class="input_bruger">
+              <label for="email">E-mail</label>
+              <input id="email" name="navn" type="email" required placeholder="email@email.com" />
+            </div>
+          </div>
+
+          <div class="songs">
+            <div class="songs_input">
+              <label for="genre">Choose Genre</label>
+              <select id="genre" name="genrelist">
+                <option value="" hidden>Choose genre</option>
+                <option value="pop">Pop</option>
+                <option value="rnb">R&B</option>
+                <option value="hiphop">Hip Hop</option>
+                <option value="electronic">Electronic</option>
+              </select>
+            </div>
+            <div class="songs_input">
+              <label for="song">Song</label>
+              <input type="text" id="song" name="song" />
+            </div>
+            <div class="songs_input">
+              <label for="artist_form">Artist</label>
+              <input type="text" name="artist" id="artist_form" />
+            </div>
+          </div>
+          <button type="submit">Send in your song</button>
+        </form>
+        <img src="albumcover/logo_2.png" id="img_form" alt="" />
+      </section>
+    </main>
+
+    <footer>
+      <script>
+        // Burgermenu
+        (() => {
+          // Skift farve på burger og X
+          const menuColor = "#F93BC8";
+          // Skift farve på kassen rundt om
+          const boxColor = "#000";
+          // Hvornår skal den komme frem f.eks. 600 eller der under
+          const mediaQuery = "2000";
+          // Hvordan skal menupunkter være align'et (left center right)
+          const alignMenu = "center";
+          // Hvor meget margin i top af den menu der kommer frem f.eks. 1rem
+          const marginTopMenu = "0";
+
+          const nav = document.querySelector("nav:where(header *)");
+          if (!nav) return;
+          const breakpoint = nav.dataset.showBtnBelow || mediaQuery;
+          const mobileMQ = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+          const iconClose = "M18 6L6 18M6 6l12 12";
+          const iconMenu = "M4 12h16M4 6h16M4 18h16";
+
+          const svg = (d) => `<svg viewBox="0 0 24 24" width="100" height="100">
+            <path fill="none" stroke="${menuColor}" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="${d}"></path>
+          </svg>`;
+
+          const btn = document.createElement("button");
+          btn.setAttribute("aria-expanded", false);
+          btn.setAttribute("aria-label", "Vis menu");
+          btn.innerHTML = svg(iconMenu);
+          nav.prepend(btn);
+
+          btn.addEventListener("click", clickHandler);
+
+          function clickHandler() {
+            let expanded = this.getAttribute("aria-expanded") === "true" || false;
+
+            this.setAttribute("aria-expanded", !expanded);
+            this.setAttribute("aria-label", !expanded ? "Skjul menu" : "Vis menu");
+
+            this.innerHTML = svg(!expanded ? iconClose : iconMenu);
+          }
+
+          const handleMobileChange = ({ matches }) => {
+            btn.hidden = matches ? false : true;
+            nav.dataset.menuBtnShown = matches ? true : false;
+          };
+
+          mobileMQ.addListener(handleMobileChange);
+
+          handleMobileChange(mobileMQ);
+
+          const injectCSS = (css) => {
+            const style = document.createElement("style");
+            style.innerText = css;
+            document.head.appendChild(style);
+            return style;
+          };
+          injectCSS(`\
+            [hidden] {display: none !important;}\
+            [aria-expanded="false"]:not([hidden]) + ul { display: none; }\
+            header { flex-wrap: wrap; }\
+            nav[data-menu-btn-shown="true"] { display: contents; }\
+            nav:only-child, nav:only-child button {  }\
+            [aria-expanded="true"]:not([hidden]) + ul { flex-flow: column; flex-basis: 100%; margin-top: ${marginTopMenu}}\
+            li { text-align: ${alignMenu}; }\
+            button[aria-expanded] {\
+              background: unset;\
+              box-sizing: border-box;/
+              inline-size: 36px;\
+              block-size: 36px;\
+              padding: .25rem;\
+              cursor: pointer;\
+            }\
+            svg {\
+              display: block;\
+              inline-size: 100%;\
+              block-size: 100%;\
+            }\
+          `);
+        })();
+      </script>
+    </footer>
+  </body>
+</html>
