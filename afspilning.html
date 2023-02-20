@@ -26,26 +26,28 @@
     <main>
       <h1 class="genre_title">Genre Title</h1>
       <template id="afspilning_liste">
-        <section>
-          <div class="afspilning">
-            <div class="afspilning_img">
-              <img src="albumcover/justin_bieber_cover.png" alt="Billede her" />
+        <a href="">
+          <section>
+            <div class="afspilning">
+              <div class="afspilning_img">
+                <img src="albumcover/justin_bieber_cover.png" alt="Billede her" />
+              </div>
+              <div class="song_info">
+                <div class="afspilning_titel">
+                  <h2>TITEL</h2>
+                </div>
+                <div class="afspilning_kunstner">
+                  <h3>KUNSTNER</h3>
+                </div>
+                <div class="afspilning_button">
+                  <audio controls>
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
             </div>
-            <div class="song_info">
-              <div class="afspilning_titel">
-                <h2>TITEL</h2>
-              </div>
-              <div class="afspilning_kunstner">
-                <h3>KUNSTNER</h3>
-              </div>
-              <div class="afspilning_button">
-                <audio controls>
-                  <source src="" type="audio/mpeg" />
-                </audio>
-              </div>
-            </div>
-          </div>
-        </section>
+          </section>
+        </a>
       </template>
     </main>
     <script src="musiklistejson.js"></script>

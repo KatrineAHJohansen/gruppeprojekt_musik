@@ -15,7 +15,7 @@ const options = {
 };
 
 async function hentData() {
-  const resspons = await fetch(`https://musikliste-8db4.restdb.io/rest/musikliste?genre=${cat}`, options);
+  const resspons = await fetch(`https://musikliste-8db4.restdb.io/rest/musikliste`, options);
   const json = await resspons.json();
   vis(json);
 }
@@ -24,13 +24,16 @@ const main = document.querySelector("main");
 const template = document.querySelector("template").content;
 
 function vis(json) {
-  console.log(json);
   json.forEach((song) => {
-    const klon = template.cloneNode(true);
-    klon.querySelector("h2").textContent = song.sang;
-    klon.querySelector("h3").textContent = song.kunstner;
-    klon.querySelector("source").src = `lydfil/` + song.lydfil;
-    main.appendChild(klon);
+    console.log(song._id);
+    if (song.genre == cat) {
+      const klon = template.cloneNode(true);
+      klon.querySelector("h2").textContent = song.sang;
+      klon.querySelector("a").href = "kunstnerside.html?id=" + song._id;
+      klon.querySelector("h3").textContent = song.kunstner;
+      klon.querySelector("source").src = `lydfil/` + song.lydfil;
+      main.appendChild(klon);
+    }
   });
 }
 
