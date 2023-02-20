@@ -5,38 +5,131 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <link rel="stylesheet" href="/shared_styles/shared_styles.css" />
+    <link rel="stylesheet" href="shared_styles/shared_styles.css" />
     <link rel="stylesheet" href="afspilning.css" />
+    <link rel="stylesheet" href="jonas_afspilning.css" />
     <title>Document</title>
   </head>
   <body>
     <header>
-      <div class="header">
-        <div>LOGO HERE</div>
-        <div>BURGERMENU HERE</div>
+      <div class="logo">
+        <a href="index.html"><img src="albumcover/logo_2_1.png" alt="" /></a>
       </div>
-      <h1 class="genre_navn">GENRE NAME HERE</h1>
+      <nav>
+        <ul>
+          <a href="afspilning.html?genre=all"> <li>Genre</li></a>
+          <a href="afspilning.html?artist=all"><li>Artist</li></a>
+          <a href="formside.html"><li>Send in your song</li></a>
+        </ul>
+      </nav>
     </header>
     <main>
-      <section>
-        <div class="afspilning">
-          <div class="afspilning_img">
-            <img src="/" alt="Billede her" />
+      <h1 class="genre_title">Genre Title</h1>
+      <template id="afspilning_liste">
+        <section>
+          <div class="afspilning">
+            <div class="afspilning_img">
+              <img src="albumcover/justin_bieber_cover.png" alt="Billede her" />
+            </div>
+            <div class="song_info">
+              <div class="afspilning_titel">
+                <h2>TITEL</h2>
+              </div>
+              <div class="afspilning_kunstner">
+                <h3>KUNSTNER</h3>
+              </div>
+              <div class="afspilning_button">
+                <audio controls>
+                  <source src="" type="audio/mpeg" />
+                </audio>
+              </div>
+            </div>
           </div>
-          <div class="afspilning_titel">
-            <h2>TITEL</h2>
-          </div>
-          <div class="afspilning_kunstner">
-            <h3>KUNSTNER</h3>
-          </div>
-          <div class="afspilning_button">
-            <p>Afspilnings button her</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </template>
     </main>
     <script src="musiklistejson.js"></script>
-    <script src="javascript.js"></script>
+    <script>
+      // Burgermenu
+      (() => {
+        // Skift farve på burger og X
+        const menuColor = "#F93BC8";
+        // Skift farve på kassen rundt om
+        const boxColor = "#000";
+        // Hvornår skal den komme frem f.eks. 600 eller der under
+        const mediaQuery = "2000";
+        // Hvordan skal menupunkter være align'et (left center right)
+        const alignMenu = "center";
+        // Hvor meget margin i top af den menu der kommer frem f.eks. 1rem
+        const marginTopMenu = "0";
+
+        const nav = document.querySelector("nav:where(header *)");
+        if (!nav) return;
+        const breakpoint = nav.dataset.showBtnBelow || mediaQuery;
+        const mobileMQ = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+        const iconClose = "M18 6L6 18M6 6l12 12";
+        const iconMenu = "M4 12h16M4 6h16M4 18h16";
+
+        const svg = (d) => `<svg viewBox="0 0 24 24" width="100" height="100">
+    <path fill="none" stroke="${menuColor}" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="${d}"></path>
+  </svg>`;
+
+        const btn = document.createElement("button");
+        btn.setAttribute("aria-expanded", false);
+        btn.setAttribute("aria-label", "Vis menu");
+        btn.innerHTML = svg(iconMenu);
+        nav.prepend(btn);
+
+        btn.addEventListener("click", clickHandler);
+
+        function clickHandler() {
+          let expanded = this.getAttribute("aria-expanded") === "true" || false;
+
+          this.setAttribute("aria-expanded", !expanded);
+          this.setAttribute("aria-label", !expanded ? "Skjul menu" : "Vis menu");
+
+          this.innerHTML = svg(!expanded ? iconClose : iconMenu);
+        }
+
+        const handleMobileChange = ({ matches }) => {
+          btn.hidden = matches ? false : true;
+          nav.dataset.menuBtnShown = matches ? true : false;
+        };
+
+        mobileMQ.addListener(handleMobileChange);
+
+        handleMobileChange(mobileMQ);
+
+        const injectCSS = (css) => {
+          const style = document.createElement("style");
+          style.innerText = css;
+          document.head.appendChild(style);
+          return style;
+        };
+        injectCSS(`\
+    [hidden] {display: none !important;}\
+    [aria-expanded="false"]:not([hidden]) + ul { display: none; }\
+    header { flex-wrap: wrap; }\
+    nav[data-menu-btn-shown="true"] { display: contents; }\
+    nav:only-child, nav:only-child button {  }\
+    [aria-expanded="true"]:not([hidden]) + ul { flex-flow: column; flex-basis: 100%; margin-top: ${marginTopMenu}}\
+    li { text-align: ${alignMenu}; }\
+    button[aria-expanded] {\
+      background: unset;\
+      box-sizing: border-box;/
+      inline-size: 36px;\
+      block-size: 36px;\
+      padding: .25rem;\
+      cursor: pointer;\
+    }\
+    svg {\
+      display: block;\
+      inline-size: 100%;\
+      block-size: 100%;\
+    }\
+  `);
+      })();
+    </script>
     <footer></footer>
   </body>
 </html>

@@ -1,0 +1,177 @@
+html,
+body {
+  overflow-x: hidden;
+}
+@font-face {
+  font-family: centrano2;
+  src: url(font/CentraNo2-Medium.ttf);
+}
+header nav button {
+  border: none;
+}
+
+nav button svg {
+  height: 3rem;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+}
+
+nav button {
+  z-index: 2;
+}
+
+header div img {
+  width: 5rem;
+  background-color: transparent;
+}
+
+html body header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 2rem 5rem 2rem;
+  position: relative;
+}
+
+nav ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #142349;
+  width: 85vw;
+  z-index: 1;
+  padding-top: 40vh;
+}
+
+nav ul li {
+  font-family: centrano2;
+  font-size: var(--h3-font-size);
+  color: white;
+  list-style-type: none;
+}
+
+nav ul a {
+  text-decoration: none;
+}
+
+.genre_title {
+  color: var(--header-text-color);
+}
+
+.afspilning {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  background-color: #fa3bc8;
+  padding: 1rem;
+  gap: 1rem;
+  margin-top: 2rem;
+  color: var(--text-color);
+}
+
+.song_info {
+  grid-column: 2/4;
+}
+
+h1.genre_title {
+  font-family: centrano2;
+}
+
+div .afspilning_kunstner h3 {
+  font-family: centrano2;
+  opacity: 50%;
+}
+
+div .afspilning_titel h2 {
+  font-family: centrano2;
+  font-size: 5vw;
+}
+
+audio {
+  max-width: 40vw;
+  height: 2rem;
+}
+
+div .afspilning_img img {
+  width: 90%;
+}
+
+div.song_info {
+  grid-column: 2/5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+@media (min-width: 800px) {
+  div .afspilning_img img {
+    width: 7vw;
+  }
+
+  div .afspilning_titel h2 {
+    font-size: 2vw;
+  }
+
+  div .afspilning_kunstner h3 {
+    font-size: 1.5vw;
+  }
+
+  audio {
+    height: 4rem;
+  }
+
+  div.song_info {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  h1.genre_title {
+    font-size: 7vw;
+  }
+
+  div.afspilning {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+div div h2 {
+  font-size: 7vw;
+  font-family: centrano2;
+}
+
+div div h3 {
+  font-size: 3vw;
+  font-family: centrano2;
+}
+
+div div p {
+  font-size: 2vw;
+  font-family: centrano2;
+}
+
+.kunstner_card {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.div1 {
+  grid-area: 1 /3 / 2 / 5;
+}
+
+.div2 {
+  grid-area: 2 / 3 / 2 / 5;
+}
+
+.div3 {
+  grid-area: 3 / 3 / 3 / 5;
+  margin-top: -2rem;
+}
+
+.div4 {
+  grid-area: 4 / 3 / 4 / 5;
+}

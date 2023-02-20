@@ -1,3 +1,7 @@
+html,
+body {
+  overflow-x: hidden;
+}
 :root {
   /*COLOR*/
   --bg-color: #09122a;
