@@ -17,7 +17,15 @@
       </div>
       <nav>
         <ul>
-          <a href="afspilning.html?genre=all"> <li>Genre</li></a>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Genre &#8964;</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="afspilning.html?cat=Pop">Pop </a>
+              <a href="afspilning.html?cat=Indie">Indie </a>
+              <a href="afspilning.html?cat=Hip_Hop">Hip Hop </a>
+              <a href="afspilning.html?cat=RnB">R&B </a>
+            </div>
+          </div>
           <a href="afspilning.html?artist=all"><li>Artist</li></a>
           <a href="formside.html"><li>Send in your song</li></a>
         </ul>
@@ -27,108 +35,48 @@
       <section>
         <h1></h1>
         <div class="kunstner_card">
-          <div class="div1">
-            <h2>TITEL</h2>
-          </div>
-          <div class="div2">
-            <h3>Album navn</h3>
-          </div>
-          <div class="div3">
-            <p>genre</p>
-          </div>
-          <div class="div4">
-            <audio controls>
-              <source src="" type="audio/mpeg" />
-            </audio>
+          <div class="kunstner_card_info">
+            <div class="div1">
+              <h2>TITEL</h2>
+            </div>
+            <div class="div2">
+              <!-- <span class="subtitle">Artist</span> -->
+              <h3>Album navn</h3>
+            </div>
+            <div class="div3">
+              <span class="subtitle">Genre</span>
+              <p>genre</p>
+            </div>
+            <div class="div6">
+              <span class="subtitle">Album</span>
+              <p>genre</p>
+            </div>
+            <div class="div7">
+              <span class="subtitle">Release date</span>
+              <p>genre</p>
+            </div>
+            <div class="div4">
+              <audio controls>
+                <source src="" type="audio/mpeg" />
+              </audio>
+            </div>
           </div>
           <div class="div5">
             <img src="albumcover/justin_bieber_cover.png" alt="." />
           </div>
         </div>
       </section>
+      <section class="grid_1-1">
+        <div class="artist_description">
+          <p></p>
+          <a href="" class="spotify"> <button>Find artist on spotify</button></a>
+        </div>
+        <img src="albumcover/jbtest.png" alt="" />
+      </section>
     </main>
     <script src="kunstnersidejson.js"></script>
-    <script>
-      // Burgermenu
-      (() => {
-        // Skift farve på burger og X
-        const menuColor = "#F93BC8";
-        // Skift farve på kassen rundt om
-        const boxColor = "#000";
-        // Hvornår skal den komme frem f.eks. 600 eller der under
-        const mediaQuery = "2000";
-        // Hvordan skal menupunkter være align'et (left center right)
-        const alignMenu = "center";
-        // Hvor meget margin i top af den menu der kommer frem f.eks. 1rem
-        const marginTopMenu = "0";
+    <script src="burgermenu.js"></script>
 
-        const nav = document.querySelector("nav:where(header *)");
-        if (!nav) return;
-        const breakpoint = nav.dataset.showBtnBelow || mediaQuery;
-        const mobileMQ = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
-        const iconClose = "M18 6L6 18M6 6l12 12";
-        const iconMenu = "M4 12h16M4 6h16M4 18h16";
-
-        const svg = (d) => `<svg viewBox="0 0 24 24" width="100" height="100">
-    <path fill="none" stroke="${menuColor}" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="${d}"></path>
-  </svg>`;
-
-        const btn = document.createElement("button");
-        btn.setAttribute("aria-expanded", false);
-        btn.setAttribute("aria-label", "Vis menu");
-        btn.innerHTML = svg(iconMenu);
-        nav.prepend(btn);
-
-        btn.addEventListener("click", clickHandler);
-
-        function clickHandler() {
-          let expanded = this.getAttribute("aria-expanded") === "true" || false;
-
-          this.setAttribute("aria-expanded", !expanded);
-          this.setAttribute("aria-label", !expanded ? "Skjul menu" : "Vis menu");
-
-          this.innerHTML = svg(!expanded ? iconClose : iconMenu);
-        }
-
-        const handleMobileChange = ({ matches }) => {
-          btn.hidden = matches ? false : true;
-          nav.dataset.menuBtnShown = matches ? true : false;
-        };
-
-        mobileMQ.addListener(handleMobileChange);
-
-        handleMobileChange(mobileMQ);
-
-        const injectCSS = (css) => {
-          const style = document.createElement("style");
-          style.innerText = css;
-          document.head.appendChild(style);
-          return style;
-        };
-        injectCSS(`\
-    [hidden] {display: none !important;}\
-    [aria-expanded="false"]:not([hidden]) + ul { display: none; }\
-    header { flex-wrap: wrap; }\
-    nav[data-menu-btn-shown="true"] { display: contents; }\
-    nav:only-child, nav:only-child button {  }\
-    [aria-expanded="true"]:not([hidden]) + ul { flex-flow: column; flex-basis: 100%; margin-top: ${marginTopMenu}}\
-    li { text-align: ${alignMenu}; }\
-    button[aria-expanded] {\
-      background: unset;\
-      box-sizing: border-box;/
-      inline-size: 36px;\
-      block-size: 36px;\
-      padding: .25rem;\
-      cursor: pointer;\
-    }\
-    svg {\
-      display: block;\
-      inline-size: 100%;\
-      block-size: 100%;\
-    }\
-  `);
-      })();
-    </script>
     <footer></footer>
   </body>
 </html>
