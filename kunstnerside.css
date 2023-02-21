@@ -186,6 +186,11 @@ main section img {
     opacity: 50%;
   }
 
+  div .kunstner_card_info p {
+    font-size: 2vw;
+    font-family: centrano2;
+  }
+
   span.subtitle {
     font-size: 1.5vw;
     font-family: centrano2;
