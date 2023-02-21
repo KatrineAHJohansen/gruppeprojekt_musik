@@ -5,41 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <link rel="stylesheet" href="/shared_styles/shared_styles.css" />
+    <link rel="stylesheet" href="shared_styles/shared_styles.css" />
     <link rel="stylesheet" href="kunstnerside.css" />
+    <link rel="stylesheet" href="jonas_afspilning.css" />
     <title>Kunstner underside</title>
   </head>
   <body>
-      <header>
-        <div class="header">
-          <div>LOGO HERE</div>
-          <div>BURGERMENU HERE</div>
-        </div>
-        <h1 class="genre_navn">GENRE NAME HERE</h1>
-      </header>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="albumcover/logo_2_1.png" alt="" /></a>
+      </div>
+      <nav>
+        <ul>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Genre &#8964;</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="afspilning.html?cat=Pop">Pop </a>
+              <a href="afspilning.html?cat=Indie">Indie </a>
+              <a href="afspilning.html?cat=Hip_Hop">Hip Hop </a>
+              <a href="afspilning.html?cat=RnB">R&B </a>
+            </div>
+          </div>
+          <a href="afspilning.html?artist=all"><li>Artist</li></a>
+          <a href="formside.html"><li>Send in your song</li></a>
+        </ul>
+      </nav>
+    </header>
     <main>
       <section>
+        <h1></h1>
         <div class="kunstner_card">
+          <div class="kunstner_card_info">
             <div class="div1">
-                <h1>TITEL</h1>
+              <h2>TITEL</h2>
             </div>
             <div class="div2">
-                <h2>Album navn</h2>
+              <!-- <span class="subtitle">Artist</span> -->
+              <h3>Album navn</h3>
             </div>
             <div class="div3">
-                <p>genre</p>
+              <span class="subtitle">Genre</span>
+              <p>genre</p>
+            </div>
+            <div class="div6">
+              <span class="subtitle">Album</span>
+              <p>genre</p>
+            </div>
+            <div class="div7">
+              <span class="subtitle">Release date</span>
+              <p>genre</p>
             </div>
             <div class="div4">
-                <p>afspilning</p>
+              <audio controls>
+                <source src="" type="audio/mpeg" />
+              </audio>
             </div>
-            <div class="div5">
-                <img src="." alt="." />
-            </div>
-            </div>
+          </div>
+          <div class="div5">
+            <img src="albumcover/justin_bieber_cover.png" alt="." />
+          </div>
+        </div>
+      </section>
+      <section class="grid_1-1">
+        <div class="artist_description">
+          <p></p>
+          <a href="" class="spotify"> <button>Find artist on spotify</button></a>
+        </div>
+        <img src="albumcover/udenBG.png" alt="" />
       </section>
     </main>
-    <script src="musiklistejson.js"></script>
-    <script src="javascript.js"></script>
+    <script src="kunstnersidejson.js"></script>
+    <script src="burgermenu.js"></script>
+
     <footer></footer>
   </body>
 </html>
