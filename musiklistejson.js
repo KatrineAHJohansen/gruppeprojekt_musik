@@ -32,6 +32,7 @@ function vis(json) {
       klon.querySelector("a").href = "kunstnerside.html?id=" + song._id;
       klon.querySelector("h3").textContent = song.kunstner;
       klon.querySelector("source").src = `lydfil/` + song.lydfil;
+      klon.querySelector("img").src = `albumcover/webp/` + song.coverimg;
       main.appendChild(klon);
     }
   });
