@@ -1,11 +1,11 @@
 const urlParams = new URLSearchParams(window.location.search);
 console.log("params", urlParams);
 
-const cat = urlParams.get("cat");
+const artist = urlParams.get("artist");
 
-console.log("cat", cat);
+console.log("artist", artist);
 
-document.querySelector("h1").textContent = cat;
+document.querySelector("h1").textContent = artist;
 
 const url = "https://musikliste-8db4.restdb.io/rest/musikliste";
 
@@ -26,8 +26,8 @@ const template = document.querySelector("template").content;
 
 function vis(json) {
   json.forEach((song) => {
-    console.log(song._id);
-    if (song.genre == cat) {
+    console.log(song.kunstner);
+    if (song.kunstner == artist) {
       const klon = template.cloneNode(true);
       klon.querySelector("h2").textContent = song.sang;
       klon.querySelector("a").href = "kunstnerside.html?id=" + song._id;
