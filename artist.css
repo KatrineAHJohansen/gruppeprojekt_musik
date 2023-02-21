@@ -1,8 +1,8 @@
 p.artist_list {
   color: white;
   font-family: centrano2;
-  font-size: 3vw;
-  line-height: 20vh;
+  font-size: 6vw;
+  line-height: 10vh;
   text-align: center;
 }
 
@@ -13,4 +13,22 @@ a {
 body main h2 {
   font-family: centrano2;
   text-align: center;
+}
+@media (min-width: 800px) {
+  p.artist_list {
+    color: white;
+    font-family: centrano2;
+    font-size: 3vw;
+    line-height: 20vh;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  body main h2 {
+    font-family: centrano2;
+    text-align: center;
+  }
 }
