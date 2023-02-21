@@ -90,6 +90,7 @@ div .afspilning_kunstner h3 {
 div .afspilning_titel h2 {
   font-family: centrano2;
   font-size: 5vw;
+  color: #020864;
 }
 
 audio {
@@ -109,6 +110,10 @@ div.song_info {
   gap: 15px;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media (min-width: 800px) {
   div .afspilning_img img {
     width: 7vw;
@@ -116,6 +121,7 @@ div.song_info {
 
   div .afspilning_titel h2 {
     font-size: 2vw;
+    color: #020864;
   }
 
   div .afspilning_kunstner h3 {
