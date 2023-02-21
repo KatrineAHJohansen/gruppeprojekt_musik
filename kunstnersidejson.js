@@ -29,4 +29,5 @@ function showProduct(song) {
   document.querySelector("source").src = "lydfil/Rue.mp3";
   document.querySelector(".artist_description p").textContent = song.description;
   document.querySelector(".artist_description a").href = song.spotify_link;
+  document.querySelector(".grid_1-1 img").src = `distortion/` + song.distortion;
 }
