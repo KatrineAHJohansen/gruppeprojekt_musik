@@ -5,7 +5,7 @@
   // Skift farve på kassen rundt om
   const boxColor = "#000";
   // Hvornår skal den komme frem f.eks. 600 eller der under
-  const mediaQuery = "2000";
+  const mediaQuery = "5000";
   // Hvordan skal menupunkter være align'et (left center right)
   const alignMenu = "center";
   // Hvor meget margin i top af den menu der kommer frem f.eks. 1rem

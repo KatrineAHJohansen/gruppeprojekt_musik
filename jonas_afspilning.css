@@ -28,13 +28,6 @@ header div img {
   background-color: transparent;
 }
 
-html body header {
-  display: flex;
-  justify-content: space-between;
-  margin: 1rem 2rem 5rem 2rem;
-  position: relative;
-}
-
 nav ul {
   position: absolute;
   top: 0;
@@ -44,13 +37,6 @@ nav ul {
   width: 85vw;
   z-index: 1;
   padding-top: 40vh;
-}
-
-nav ul li {
-  font-family: centrano2;
-  font-size: var(--h3-font-size);
-  color: white;
-  list-style-type: none;
 }
 
 nav ul a {

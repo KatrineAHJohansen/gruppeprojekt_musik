@@ -86,7 +86,7 @@ div.artist_description {
   background-color: #f93bc8;
   color: white;
   font-family: centrano2;
-  font-size: 2vw;
+  font-size: 4vw;
   padding: 1rem 2rem;
 }
 
@@ -208,5 +208,14 @@ main section img {
 
   div.div7 {
     margin-top: 1rem;
+  }
+
+  .artist_description a button {
+    margin-top: 2rem;
+    background-color: #f93bc8;
+    color: white;
+    font-family: centrano2;
+    font-size: 2vw;
+    padding: 1rem 2rem;
   }
 }

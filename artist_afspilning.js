@@ -26,7 +26,7 @@ const template = document.querySelector("template").content;
 
 function vis(json) {
   json.forEach((song) => {
-    console.log(song.kunstner);
+    console.log(song);
     if (song.kunstner == artist) {
       const klon = template.cloneNode(true);
       klon.querySelector("h2").textContent = song.sang;
