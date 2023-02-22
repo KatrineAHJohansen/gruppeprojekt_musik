@@ -140,6 +140,8 @@ div.div7 {
 main section img {
   max-width: 100%;
   padding: 1rem;
+  width: 100%;
+  object-fit: cover;
 }
 @media (min-width: 800px) {
   .kunstner_card {
@@ -148,7 +150,7 @@ main section img {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     background-color: #fa3bc8;
-    padding: 1rem;
+    padding: rem;
     gap: 1rem;
     margin-top: 2rem;
     color: var(--text-color);
@@ -174,7 +176,7 @@ main section img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem;
+    padding: 3rem 3rem 3rem 1rem;
   }
 
   .kunstner_card_info h2 {

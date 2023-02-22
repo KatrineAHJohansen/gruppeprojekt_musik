@@ -45,6 +45,7 @@ nav ul a {
 
 .genre_title {
   color: var(--header-text-color);
+  text-transform: none;
 }
 
 .afspilning {
