@@ -94,6 +94,10 @@ nav ul li {
   list-style-type: none;
 }
 
+nav ul li:hover {
+  color: var(--header-text-color);
+}
+
 /*-------------------------------------------------*/
 
 /*Blåt filter på img'er*/
@@ -123,6 +127,11 @@ button.dropbtn {
   color: white;
   font-size: var(--h3-font-size);
   font-family: centrano2;
+  cursor: pointer;
+}
+
+button.dropbtn:hover {
+  color: var(--header-text-color);
 }
 
 .dropdown-content {

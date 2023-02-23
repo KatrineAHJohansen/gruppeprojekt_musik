@@ -88,8 +88,12 @@ div.artist_description {
   font-family: centrano2;
   font-size: 4vw;
   padding: 1rem 2rem;
+  cursor: pointer;
 }
 
+.artist_description a button:hover {
+  background-color: #9e157a;
+}
 main section img {
   max-width: 100%;
   padding: 2rem;

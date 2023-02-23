@@ -6,6 +6,10 @@ p.artist_list {
   text-align: center;
 }
 
+p.artist_list:hover {
+  color: var(--header-text-color);
+}
+
 a {
   text-decoration: none;
 }
